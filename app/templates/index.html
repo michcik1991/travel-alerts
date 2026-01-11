@@ -1,14 +1,13 @@
-<h2>Travel Alerts</h2>
-
-<form method="post">
-  <input name="country" placeholder="np. Grecja" required>
-  <button>Szukaj</button>
-</form>
-
-{% if results %}
-<ul>
-  {% for r in results %}
-    <li>{{ r.name }} – {{ r.price }}</li>
-  {% endfor %}
-</ul>
-{% endif %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Travel Alerts</title>
+</head>
+<body>
+    <h1>Wybierz kraj</h1>
+    <form action="/search" method="post">
+        <input type="text" name="country" placeholder="Wpisz kraj np. Grecja">
+        <button type="submit">Szukaj</button>
+    </form>
+</body>
+</html>
